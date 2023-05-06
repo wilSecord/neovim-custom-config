@@ -26,7 +26,6 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'lervag/vimtex'
   use 'windwp/nvim-autopairs'
-  use 'sainnhe/sonokai'
   use 'norcalli/nvim-colorizer.lua'
   use {
     "williamboman/mason.nvim",

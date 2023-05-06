@@ -7,3 +7,4 @@
 - nvim-tree
 - treesitter
 - vimtex
+
