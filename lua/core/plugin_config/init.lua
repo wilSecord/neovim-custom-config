@@ -12,3 +12,5 @@ require('core.plugin_config.glow')
 require('core.plugin_config.snippets.python')
 require('core.plugin_config.snippets.tex')
 require('core.plugin_config.snippets.rust')
+
+vim.cmd('source ~/.config/nvim/vim/core/plugin_config/vimtex.vim')

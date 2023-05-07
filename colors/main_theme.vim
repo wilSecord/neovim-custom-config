@@ -3,6 +3,17 @@ syntax reset
 let g:colors_name = "orng"
 set background=dark
 set t_Co=256
+
+" 0 = #000000 (black)
+" 1 = #ff9000 (orange)
+" 2 = #8787ff (purple)
+" 3 = #ffffff (white)
+" 4 = #87d7ff (blue)
+" 5 = #eaecef = (gray)
+" 6 = #87ff91 (green)
+" 7 = #ff5f62 (red)
+
+
 hi Normal guifg=#ff9000 ctermbg=NONE guibg=#transparent gui=NONE
 
 hi Error guifg=#000000 guibg=#ff5f62 ctermfg=0 ctermbg=7
@@ -37,7 +48,7 @@ hi markdownLinkText guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi javaScriptBoolean guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi Include guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi Storage guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
-hi MatchParen guifg=#000000 guibg=#ff9000 ctermfg=1 ctermbg=2
+hi MatchParen guifg=#000000 guibg=#ff9000 ctermfg=0 ctermbg=2
 
 hi ColorColumn guifg=#000000 guibg=#ff9000 ctermfg=0 ctermbg=1
 
