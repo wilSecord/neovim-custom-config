@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "jdtls", "jedi_language_server", "rust_analyzer", "ltex"}
+  ensure_installed = { "lua_ls", "jdtls", "jedi_language_server", "rust_analyzer", "texlab"}
 })
 
 local on_attach = function(_, _)
@@ -26,9 +26,9 @@ require("lspconfig").jdtls.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
-require("lspconfig").ltex.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
+require("lspconfig").texlab.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
 }
 require("lspconfig").rust_analyzer.setup {
   on_attach = on_attach,
