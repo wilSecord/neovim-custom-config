@@ -15,6 +15,8 @@ local list_snips = function()
 	end
 	print(vim.inspect(ft_snips))
 end
-
+vim.keymap.set({"i", "s"}, "<s-space>", vim.cmd("let g:UltiSnipsExpandTrigger='<space>'"))
+vim.keymap.set({"i", "s"}, "<s-c-tab>", vim.cmd("let g:UltiSnipsExpandTrigger='<tab>'"))
+vim.keymap.set({"i", "s"}, "<s-cr>", "<cmd>undo<cr>",{ silent = true })
 vim.api.nvim_create_user_command("SnipList", list_snips, {})
 
