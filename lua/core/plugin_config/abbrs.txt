@@ -37,3 +37,4 @@ rst|reset
 hs|has
 cm|come
 gd|good
+tn|tonight
