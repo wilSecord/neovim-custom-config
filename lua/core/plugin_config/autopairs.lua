@@ -8,3 +8,7 @@ npairs.add_rules({
     Rule("$", "$", "tex")
     :with_pair(cond.not_before_regex("\\"))
 })
+npairs.add_rules({
+    Rule("<", ">", "html")
+    :with_pair(cond.not_before_regex("\\"))
+})

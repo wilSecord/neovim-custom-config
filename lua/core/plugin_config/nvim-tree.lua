@@ -3,4 +3,5 @@ vim.g.loaded_netrwPlugin = 1
 
 require('nvim-tree').setup()
 
+
 vim.keymap.set('n', '<c-f>', ':NvimTreeFocus<CR>')
