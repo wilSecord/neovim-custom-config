@@ -18,6 +18,18 @@ a_s("all", {
         f(function(_, snip)
             return "\\mathbb{" .. snip.captures[1] .. "}"
         end, {})
+    ),
+    snip({
+        trig = "(.)^",
+        regTrig = true
+    }, {
+        f(function(_, snip)
+            return snip.captures[1] .. "^{"
+        end, {}),
+        ins(0),
+        text("}")
+    }
+
     )
 
 
