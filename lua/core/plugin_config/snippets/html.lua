@@ -1,16 +1,7 @@
-local ls = require('luasnip')
-
-local ins = ls.insert_node
-local text = ls.text_node
-local snip = ls.snippet
-local f = ls.function_node
-
-local function copy(args)
-    return args[1]
-end
+require "core.plugin_config.snippets.snippet_core"
 
 
-ls.add_snippets("html", {
+a_s("html", {
   snip("b", {
     text("<"),
     ins(1),

@@ -1,15 +1,6 @@
-local ls = require('luasnip')
+require "core.plugin_config.snippets.snippet_core"
 
-local ins = ls.insert_node
-local text = ls.text_node
-local snip = ls.snippet
-local fn = ls.function_node
-
-local function copy(args)
-    return args[1]
-end
-
-ls.add_snippets("tex", {
+a_s("tex", {
   snip("qk", {
     text("$"), ins(0, ""), text("$"),
   }),
@@ -21,11 +12,11 @@ ls.add_snippets("tex", {
   }
 )
 
-ls.add_snippets("tex", {
+a_s("tex", {
     snip("beg", {
         text("\\begin{"), ins(1, ""), text({"}", "\t"}),
         ins(0, ""),
-        text({"", "end{"}), fn(copy, 1), text("}")
+        text({"", "end{"}), f(copy, 1), text("}")
     }),
     snip("docstart", {
         text("\\documentclass{"), ins(1, ""), text({"}", ""}),

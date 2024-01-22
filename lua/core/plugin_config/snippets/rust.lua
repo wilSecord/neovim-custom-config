@@ -1,10 +1,6 @@
-local ls = require('luasnip')
+require "core.plugin_config.snippets.snippet_core"
 
-local ins = ls.insert_node
-local text = ls.text_node
-local snip = ls.snippet
-
-ls.add_snippets("rust", {
+a_s("rust", {
     snip("DEF", {
         text("fn "),
         ins(1, "main"),

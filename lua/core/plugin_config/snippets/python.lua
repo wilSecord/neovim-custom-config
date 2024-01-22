@@ -1,10 +1,6 @@
-local ls = require('luasnip')
+require "core.plugin_config.snippets.snippet_core"
 
-local ins = ls.insert_node
-local text = ls.text_node
-local snip = ls.snippet
-
-ls.add_snippets("python", {
+a_s("python", {
   snip("fn", {
     text("def "),
     ins(1, "main"),
@@ -13,17 +9,11 @@ ls.add_snippets("python", {
     text({"):", "\t"}),
     ins(0, "..."),
   }),
-})
-
-ls.add_snippets("python", {
   snip("pr", {
     text("print("),
     ins(0, "'Hello World!'"),
     text(")"),
   }),
-})
-
-ls.add_snippets("python", {
   snip("pygame", {
      text({"import pygame", "", ""}),
      text({"pygame.init()", ""}),
@@ -37,5 +27,14 @@ ls.add_snippets("python", {
      ins(3, "..."),
      text({"", "", ""}),
      text({'if __name__ == "__main__":', "\twhile 1:", "\t\tmain()"}),
-  })
+  }),
+--  snip("c", {
+--      text("class "),
+--      ins(1, "NAME"),
+--      text({":", "def __init__("}),
+--      ins(2, "self"),
+--      text("):")
+--  })
 })
+
+
