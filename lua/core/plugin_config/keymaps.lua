@@ -16,8 +16,17 @@ local list_snips = function()
 	print(vim.inspect(ft_snips))
 end
 
+
 vim.keymap.set({"i", "s"}, "<s-cr>", "<cmd>undo<cr>",{ silent = true })
 
+vim.keymap.set({"i", "s"}, "<M-CR>", "<cmd>redo<cr>", { silent = true })
+
+vim.keymap.set({"i", "s"}, "<C-s>", "<cmd>w<cr>")
+
+vim.api.nvim_create_user_command("F", function ()
+    vim.cmd("belowright split term://fish")
+    vim.cmd("resize 10")
+end, {})
 
 
 vim.api.nvim_create_user_command("SnipList", list_snips, {})

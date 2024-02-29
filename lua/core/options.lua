@@ -7,4 +7,4 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 vim.cmd('colorscheme main_theme')
-
+vim.cmd('autocmd BufNewFile *.tex 0r ~/.config/nvim/templates/tex.tex')
