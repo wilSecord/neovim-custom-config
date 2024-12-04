@@ -15,14 +15,21 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+  }
+ use {
+   'nvim-treesitter/nvim-treesitter',
+ }
   use 'dense-analysis/ale'
   use 'tpope/vim-commentary'
   use 'jeetsukumaran/vim-pythonsense'
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
+  use 'rebelot/heirline.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'frabjous/knap'
   use 'saadparwaiz1/cmp_luasnip'
   use 'lervag/vimtex'
   use 'windwp/nvim-autopairs'
@@ -33,6 +40,7 @@ return require('packer').startup(function(use)
 -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
 }
+  use 'glepnir/template.nvim'
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

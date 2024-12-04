@@ -1,9 +1,11 @@
+local navic = require("nvim-navic")
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "jdtls", "jedi_language_server", "rust_analyzer", "texlab", "cssls", "html"}
 })
 
-local on_attach = function(_, _)
+local on_attach = function(client, buf)
+  navic.attach(client,buf)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 

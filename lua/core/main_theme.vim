@@ -9,7 +9,7 @@ set t_Co=256
 " 2 = #8787ff (purple)
 " 3 = #ffffff (white)
 " 4 = #87d7ff (blue)
-" 5 = #eaecef = (gray)
+" 5 = #eaecef (gray)
 " 6 = #87ff91 (green)
 " 7 = #ff5f62 (red)
 
@@ -36,7 +36,7 @@ hi Todo guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
 hi Special guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
 hi Label guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
 hi Delimiter guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
-hi CursorLineNR guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
+hi CursorLineNR guifg=#ff9000 guibg=NONE ctermfg=3 ctermbg=NONE
 hi Define guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
 hi MoreMsg guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
 hi Tag guifg=#e9ff81 guibg=NONE ctermfg=3 ctermbg=NONE
@@ -48,7 +48,7 @@ hi markdownLinkText guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi javaScriptBoolean guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi Include guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi Storage guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
-hi MatchParen guifg=#000000 guibg=#ff9000 ctermfg=0 ctermbg=2
+hi MatchParen guifg=#000000 guibg=#ff9000 ctermfg=0 ctermbg=1
 
 hi ColorColumn guifg=#000000 guibg=#ff9000 ctermfg=0 ctermbg=1
 
@@ -95,9 +95,9 @@ hi LineNr guifg=#87d7ff guibg=NONE ctermfg=4 ctermbg=NONE
 hi NonText guifg=#8787ff ctermfg=2
 hi Comment guifg=#87d7ff ctermfg=4
 hi SpecialComment guifg=#8787ff gui=italic guibg=NONE ctermfg=2 cterm=italic ctermbg=NONE
-hi CursorLine guibg=#000000 gui=underline guibg=#ff9000 ctermbg=0 cterm=underline ctermfg=1 
-hi StatusLine guibg=NONE guifg=#000000 ctermbg=1 ctermfg=0
+hi CursorLine guifg=#000000 gui=underline guibg=#ff9000 gui=bold ctermbg=0 cterm=underline ctermfg=1 
+hi StatusLine guibg=#ff9000 guifg=#000000 ctermbg=1 ctermfg=0
 hi StatusLineNC guifg=#ff9000 guibg=#000000 ctermfg=1 ctermbg=0
 hi Search guibg=#8787ff guifg=#ff9000 ctermbg=2 ctermfg=Black
 hi VertSplit guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
-hi Visual guibg=#d5d5d5 ctermbg=5
+hi Visual guifg=#000000 guibg=#ff9000 gui=bold

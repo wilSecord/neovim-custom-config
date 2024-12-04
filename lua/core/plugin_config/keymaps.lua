@@ -16,18 +16,29 @@ local list_snips = function()
 	print(vim.inspect(ft_snips))
 end
 
+--vim.keymap.set({"i", "s"}, "<s-RIGHT>", "<cmd>bn<cr>", {silent = true})
+--vim.keymap.set({"i", "s"}, "<s-left>", "<cmd>bn<cr>", {silent = true})
 
 vim.keymap.set({"i", "s"}, "<s-cr>", "<cmd>undo<cr>",{ silent = true })
 
-vim.keymap.set({"i", "s"}, "<M-CR>", "<cmd>redo<cr>", { silent = true })
+vim.keymap.set({"i", "s"}, "<a-CR>", "<cmd>redo<cr>", { silent = true })
 
 vim.keymap.set({"i", "s"}, "<C-s>", "<cmd>w<cr>")
-
-vim.api.nvim_create_user_command("F", function ()
-    vim.cmd("belowright split term://fish")
-    vim.cmd("resize 10")
-end, {})
 
 
 vim.api.nvim_create_user_command("SnipList", list_snips, {})
 
+vim.keymap.set({"n"}, "<a-]>", "<cmd>tabnext<cr>", { silent = true })
+vim.keymap.set({"n"}, "<a-[>", "<cmd>tabprevious<cr>", { silent = true })
+vim.keymap.set({"n"}, "<c-w>", "<cmd>tabclose<cr>", { silent = true })
+vim.keymap.set({"n"}, "<c-t>", "<cmd>tabnew<cr>", { silent = true })
+
+vim.keymap.set({"n"}, "<s-f>", "<cmd>T<cr>")
+
+vim.keymap.set({"n"}, "<C-e>",
+    function()
+        local result = vim.treesitter.get_captures_at_cursor(0)
+        print(vim.inspect(result))
+    end,
+    { noremap = true, silent = false }
+)

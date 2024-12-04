@@ -2,7 +2,7 @@ require "core.plugin_config.snippets.snippet_core"
 
 a_s("tex", {
   snip("mk", {
-      text("$"), ins(1), text("$"), ins(0),
+      text("$ "), ins(1), text(" $"), ins(0)
   }),
   snip("dm", {
       text({"\\[", "\t"}), ins(0, ""), text({"", "\\]"})
@@ -17,18 +17,19 @@ a_s("tex", {
       ins(0)
   }),
   snip({
-      trig = "(.)^",
+      trig = "(.+)^",
       regTrig = true
   }, {
       f(function(_, snip)
           return snip.captures[1]
       end),
       text("^{"),
-      ins(0),
-      text("}")
+      ins(1),
+      text("}"),
+      ins(2)
   }),
   snip({
-      trig = "(.)_",
+      trig = "(.+)_",
       regTrig = true
   }, {
       f(function(_, snip)
@@ -37,7 +38,7 @@ a_s("tex", {
       text("_{"),
       ins(1),
       text("}"),
-      ins(0)
+      ins(2)
   }),
   snip("fsa", {
       text({"\\begin{tikzpicture}", "\\begin{scope}[every node/.style={circle, thick, draw, minimum width = 0.75cm}]", "\t"}),
@@ -75,6 +76,11 @@ a_s("tex", {
       })
   ),
   snip({
+      trig = "*"
+  },
+      text("\\cdot")
+  ),
+  snip({
       trig = "pt(.+)-(.+)",
       regTrig = true,
   },
@@ -100,13 +106,66 @@ a_s("tex", {
           end),
       })
   ),
+  snip("frac", fmt([[
+      \frac{{{}}}{{{}}}{}
+  ]], {
+      ins(1), ins(2), ins(0)
+  })),
   snip("pd", fmt([[
       {}, {} \ra {}
   ]], {
       ins(1),
       ins(2),
       ins(3),
-  }))
+  })),
+  snip("mx", fmt([[
+      \begin{{bmatrix}} {}\\{}\\{} \end{{bmatrix}}{}
+  ]], {
+      ins(1),
+      ins(2),
+      ins(3),
+      ins(0)
+  })),
+  snip({
+      trig = "px",
+      regTrig = true,
+  },
+      fmt([[
+          \cdot P({}|{}){}
+      ]], {
+          ins(1),
+          ins(2),
+          ins(3),
+      })
+  ),
+  snip({
+      trig = "(.+)chs(.+),",
+      regTrig = true,
+  },
+      fmt([[
+          \binom{{{}}}{{{}}}
+      ]], {
+          f(function(_, snip)
+              return snip.captures[1]
+          end),
+          f(function(_, snip)
+              return snip.captures[2]
+          end),
+      })
+  ),
+  --snip({
+  --    trig = "x(.+),",
+  --    regTrig = true,
+  --},
+  --    fmt([[
+  --        X_{{{}}}{}
+  --    ]], {
+  --        f(function (_, snip)
+  --            return snip.captures[1]
+  --        end),
+  --        ins(1)
+  --    })
+  --)
 },{
     type = "autosnippets",
   }
