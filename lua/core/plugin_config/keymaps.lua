@@ -28,8 +28,8 @@ vim.keymap.set({"i", "s"}, "<C-s>", "<cmd>w<cr>")
 
 vim.api.nvim_create_user_command("SnipList", list_snips, {})
 
-vim.keymap.set({"n"}, "<a-]>", "<cmd>tabnext<cr>", { silent = true })
-vim.keymap.set({"n"}, "<a-[>", "<cmd>tabprevious<cr>", { silent = true })
+vim.keymap.set({"n", "t", "i", "s"}, "<a-]>", "<cmd>tabnext<cr>", { silent = true })
+vim.keymap.set({"n", "t", "i", "s"}, "<a-[>", "<cmd>tabprevious<cr>", { silent = true })
 vim.keymap.set({"n"}, "<c-w>", "<cmd>tabclose<cr>", { silent = true })
 vim.keymap.set({"n"}, "<c-t>", "<cmd>tabnew<cr>", { silent = true })
 
@@ -42,3 +42,7 @@ vim.keymap.set({"n"}, "<C-e>",
     end,
     { noremap = true, silent = false }
 )
+
+vim.keymap.set('n', '<Leader>t', function()
+    vim.fn.feedkeys(':Template ')
+end, { remap = true})

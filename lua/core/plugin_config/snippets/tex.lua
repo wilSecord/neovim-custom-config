@@ -26,7 +26,7 @@ a_s("tex", {
       text("^{"),
       ins(1),
       text("}"),
-      ins(2)
+      ins(0)
   }),
   snip({
       trig = "(.+)_",
@@ -38,7 +38,7 @@ a_s("tex", {
       text("_{"),
       ins(1),
       text("}"),
-      ins(2)
+      ins(0)
   }),
   snip("fsa", {
       text({"\\begin{tikzpicture}", "\\begin{scope}[every node/.style={circle, thick, draw, minimum width = 0.75cm}]", "\t"}),
@@ -120,6 +120,14 @@ a_s("tex", {
   })),
   snip("mx", fmt([[
       \begin{{bmatrix}} {}\\{}\\{} \end{{bmatrix}}{}
+  ]], {
+      ins(1),
+      ins(2),
+      ins(3),
+      ins(0)
+  })),
+  snip("pmx", fmt([[
+      \begin{{pmatrix}} {}\\{}\\{} \end{{pmatrix}}{}
   ]], {
       ins(1),
       ins(2),
