@@ -1,7 +1,7 @@
 local navic = require("nvim-navic")
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "jdtls", "jedi_language_server", "rust_analyzer", "texlab", "cssls", "html"}
+  ensure_installed = { "lua_ls", "clangd", "jdtls", "jedi_language_server", "rust_analyzer", "texlab", "cssls", "html", "r_language_server"}
 })
 
 local on_attach = function(client, buf)
@@ -16,6 +16,7 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("luasnip.loaders.from_vscode").lazy_load()
+
 require("lspconfig").lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -41,6 +42,14 @@ require("lspconfig").cssls.setup {
     capabilities = capabilities
 }
 require("lspconfig").html.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+require("lspconfig").clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+require("lspconfig").r_language_server.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }

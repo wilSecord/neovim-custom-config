@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'
   use 'jeetsukumaran/vim-pythonsense'
   use 'hrsh7th/nvim-cmp'
+  use '3rd/image.nvim'
+  use 'nvim-orgmode/orgmode'
   use 'L3MON4D3/LuaSnip'
   use 'rebelot/heirline.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -47,6 +49,7 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+  use "chentoast/marks.nvim"
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

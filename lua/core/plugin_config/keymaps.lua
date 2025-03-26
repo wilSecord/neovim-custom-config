@@ -25,6 +25,8 @@ vim.keymap.set({"i", "s"}, "<a-CR>", "<cmd>redo<cr>", { silent = true })
 
 vim.keymap.set({"i", "s"}, "<C-s>", "<cmd>w<cr>")
 
+vim.keymap.set({"n"}, "<C-h>", "<cmd>NvimTreeClose<cr>")
+
 
 vim.api.nvim_create_user_command("SnipList", list_snips, {})
 
@@ -34,6 +36,8 @@ vim.keymap.set({"n"}, "<c-w>", "<cmd>tabclose<cr>", { silent = true })
 vim.keymap.set({"n"}, "<c-t>", "<cmd>tabnew<cr>", { silent = true })
 
 vim.keymap.set({"n"}, "<s-f>", "<cmd>T<cr>")
+
+vim.keymap.set('x', 'g/', '<ESC>/\\%V')
 
 vim.keymap.set({"n"}, "<C-e>",
     function()

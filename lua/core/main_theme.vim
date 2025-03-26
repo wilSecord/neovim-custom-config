@@ -59,6 +59,7 @@ hi GitGutterDelete guifg=#ff5f62 guibg=NONE ctermfg=7 ctermbg=NONE
 hi GitGutterChangeDelete guifg=#ff5f62 guibg=NONE ctermfg=7 ctermbg=NONE
 hi GitGutterAdd guifg=#87d7ff guibg=NONE ctermfg=4 ctermbg=NONE
 
+hi FloatBorder guifg=#ff9000 guibg=#ff9000 ctermfg=1 ctermbg=1
 hi cssClassName guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi cssClassNameDot guifg=#d5d5d5 guibg=NONE ctermfg=5 ctermbg=NONE
 hi cssIncludeKeyword guifg=#87d7ff guibg=NONE ctermfg=4 ctermbg=NONE
