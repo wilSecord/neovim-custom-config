@@ -45,7 +45,6 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
-  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   use "chentoast/marks.nvim"
   -- My plugins here
   -- use 'foo1/bar1.nvim'
