@@ -1,5 +1,4 @@
 local org = require('orgmode')
-org.install_ts_grammar()
 
 org.setup({
   org_agenda_files = '~/orgfiles/**/*',
