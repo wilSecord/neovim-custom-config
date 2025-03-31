@@ -30,7 +30,6 @@ require("lazy").setup({
             version = "*", -- Pin Neorg to the latest stable release
             config = true,
         },
-        'wbthomason/packer.nvim',
         'nvim-tree/nvim-tree.lua',
         'nvim-tree/nvim-web-devicons',
         {
