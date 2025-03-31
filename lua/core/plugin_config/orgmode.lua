@@ -1,4 +1,5 @@
 local org = require('orgmode')
+org.install_treesitter_grammar()
 
 org.setup({
   org_agenda_files = '~/orgfiles/**/*',
