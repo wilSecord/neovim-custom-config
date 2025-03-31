@@ -1,3 +1,4 @@
+require("lazy").setup("plugins")
 require('core.main_theme')
 require('core.plugins')
 require('core.plugin_config')
