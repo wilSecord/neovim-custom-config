@@ -13,6 +13,14 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use {
+  "nvim-neorg/neorg",
+  rocks = { "lua-utils.nvim", "nvim-nio", "nui.nvim", "plenary.nvim", "pathlib.nvim" },
+  tag = "*", -- Pin Neorg to the latest stable release
+  config = function()
+      require("neorg").setup()
+  end,
+}
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use {
