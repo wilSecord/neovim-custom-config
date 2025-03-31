@@ -17,7 +17,7 @@ kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
 local gknap_settings = {
     textopdfviewerlaunch: "zathura --synctex-editor-command 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%{input}'\"'\"',%{line},0)\"' %outputfile%",
     textopdfviewerrefresh: "none",
-    textopdfforwardjump: "zathura \-\-synctex-forward=%line%:%column%:%srcfile% %outputfile%"
+    textopdfforwardjump: "zathura --synctex-forward=%line%:%column%:%srcfile% %outputfile%"
 }
 -- local gknapsettings = {
 --     texoutputext = "pdf",
