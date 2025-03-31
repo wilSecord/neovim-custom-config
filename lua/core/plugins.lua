@@ -23,8 +23,6 @@ return require('packer').startup(function(use)
    'nvim-treesitter/nvim-treesitter',
  }
   use 'dense-analysis/ale'
-  use 'tpope/vim-commentary'
-  use 'jeetsukumaran/vim-pythonsense'
   use 'hrsh7th/nvim-cmp'
   use '3rd/image.nvim'
   use 'nvim-orgmode/orgmode'
