@@ -1,6 +1,13 @@
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
-      'bash'
+      'bash',
+      'python',
+      'latex',
+      'lua',
+      'markdown',
+      'json',
+      'ocaml',
+      'markdown-inline'
   },
   ignore_install = { 'org' },
   sync_install = false,
