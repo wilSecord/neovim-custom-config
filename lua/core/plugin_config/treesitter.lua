@@ -1,5 +1,7 @@
 require('nvim-treesitter.configs').setup {
-  ensure_installed = 'all',
+  ensure_installed = {
+      'bash'
+  },
   ignore_install = { 'org' },
   sync_install = false,
   auto_install = true,
