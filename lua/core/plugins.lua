@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
   use 'dense-analysis/ale'
   use 'hrsh7th/nvim-cmp'
   use '3rd/image.nvim'
-  use 'nvim-orgmode/orgmode'
   use 'L3MON4D3/LuaSnip'
   use 'rebelot/heirline.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
