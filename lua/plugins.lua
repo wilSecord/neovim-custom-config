@@ -1,5 +1,4 @@
 return {
-    'wbthomason/packer.nvim',
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
     {
