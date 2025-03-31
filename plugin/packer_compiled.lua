@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/wil/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/wil/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
+local package_path_str = "/home/wil/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/wil/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/wil/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -93,12 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wil/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["glow.nvim"] = {
-    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0" },
-    loaded = true,
-    path = "/home/wil/.local/share/nvim/site/pack/packer/start/glow.nvim",
-    url = "https://github.com/ellisonleao/glow.nvim"
   },
   ["heirline.nvim"] = {
     loaded = true,
@@ -170,11 +164,6 @@ _G.packer_plugins = {
     path = "/home/wil/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
-  orgmode = {
-    loaded = true,
-    path = "/home/wil/.local/share/nvim/site/pack/packer/start/orgmode",
-    url = "https://github.com/nvim-orgmode/orgmode"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/wil/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -195,33 +184,14 @@ _G.packer_plugins = {
     path = "/home/wil/.local/share/nvim/site/pack/packer/start/template.nvim",
     url = "https://github.com/glepnir/template.nvim"
   },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/wil/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-pythonsense"] = {
-    loaded = true,
-    path = "/home/wil/.local/share/nvim/site/pack/packer/start/vim-pythonsense",
-    url = "https://github.com/jeetsukumaran/vim-pythonsense"
-  },
   vimtex = {
     loaded = true,
     path = "/home/wil/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/wil/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: glow.nvim
-time([[Config for glow.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0", "config", "glow.nvim")
-time([[Config for glow.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
