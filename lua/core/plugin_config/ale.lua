@@ -3,5 +3,6 @@ vim.g.ale_linters = {
   java = {'all'},
   lua = {'all'}
 }
+
 vim.g.ale_completion_enabled = 2
 vim.g.ale_lsp_suggestions = 1
