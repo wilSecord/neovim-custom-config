@@ -34,7 +34,6 @@ return require('packer').startup(function(use)
   use 'lervag/vimtex'
   use 'windwp/nvim-autopairs'
   use 'norcalli/nvim-colorizer.lua'
-  use 'vimwiki/vimwiki'
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
 -- or                            , branch = '0.1.x',
