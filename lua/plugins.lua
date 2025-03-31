@@ -27,9 +27,9 @@ return {
     }
     'glepnir/template.nvim'
     {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-  }
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+      }
     "chentoast/marks.nvim"
 }
