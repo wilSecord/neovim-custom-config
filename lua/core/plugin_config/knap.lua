@@ -14,7 +14,7 @@ kmap({ 'n', 'v', 'i' },'C-l', function() require("knap").toggle_autopreviewing()
 -- F8 invokes a SyncTeX forward search, or similar, where appropriate
 kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
 
-local gknap_settings = {
+local gknapsettings = {
     textopdfviewerlaunch = "zathura --synctex-editor-command 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%{input}'\"'\"',%{line},0)\"' %outputfile%",
     textopdfviewerrefresh = "none",
     textopdfforwardjump = "zathura --synctex-forward=%line%:%column%:%srcfile% %outputfile%"
