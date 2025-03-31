@@ -10,7 +10,7 @@ org.setup({
       }, 
       t = {
           description = "Todo",
-          template = "* TODO [%^PROMPT] %^PROMPT :%^PROMPT:\n    %^t"
+          template = "* TODO []  ::\n    %^t"
       }, 
       e = {
           description = "Event",
