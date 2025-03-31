@@ -7,6 +7,8 @@ require('nvim-treesitter.configs').setup {
       'markdown',
       'json',
       'ocaml',
+      'comment',
+
   },
   ignore_install = { 'org' },
   sync_install = false,
