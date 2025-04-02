@@ -62,6 +62,10 @@ require("lazy").setup({
             "neovim/nvim-lspconfig",
         },
         "chentoast/marks.nvim",
+        {
+          "tadmccorkle/markdown.nvim",
+          ft = "markdown", -- or 'event = "VeryLazy"'
+        },
         -- import your plugins
     },
     -- Configure any other settings here. See the documentation for more details.
