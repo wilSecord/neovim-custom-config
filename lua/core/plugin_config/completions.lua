@@ -22,6 +22,7 @@ cmp.setup({
     { name = "buffer" },
     { name = "nvim_lsp"},
     { name = "path" },
+    { name = "neorg" },
 
   },
   experimental = {

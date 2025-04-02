@@ -37,6 +37,7 @@ vim.keymap.set({"n"}, "<c-t>", "<cmd>tabnew<cr>", { silent = true })
 
 vim.keymap.set({"n"}, "<s-f>", "<cmd>T<cr>")
 
+vim.keymap.set({"n"}, "<C-l>", "<cmd>Neorg render-latex<cr>", { silent = true })
 vim.keymap.set('x', 'g/', '<ESC>/\\%V')
 
 vim.keymap.set({"n"}, "<C-e>",
