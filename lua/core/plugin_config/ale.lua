@@ -1,7 +1,7 @@
 vim.g.ale_linters = {
-  python = {'all'},
-  java = {'all'},
-  lua = {'all'}
+    python = {'all'},
+    java = {'all'},
+    lua = {'all'}
 }
 
 vim.g.ale_completion_enabled = 2

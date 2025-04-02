@@ -15,9 +15,9 @@ a_s("md", {
         trig = "&(%u)",
         regTrig = true
     },
-        f(function(_, snip)
-            return "\\mathbb{" .. snip.captures[1] .. "}"
-        end, {})
+    f(function(_, snip)
+        return "\\mathbb{" .. snip.captures[1] .. "}"
+    end, {})
     ),
     snip({
         trig = "(.)^",

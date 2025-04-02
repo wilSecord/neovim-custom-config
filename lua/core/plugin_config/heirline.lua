@@ -88,7 +88,7 @@ local ruler = {
         self.ft = vim.bo.filetype
     end,
     provider = function (self)
-       return "%=[" .. self.ft .. "] %7(%l/%3L%):%2c %P"
+        return "%=[" .. self.ft .. "] %7(%l/%3L%):%2c %P"
     end,
     hl = function (self)
         return { fg = static.mode_cols[string.lower(self.mode:sub(1,1))],
@@ -105,7 +105,7 @@ local ending = {
         self.width = vim.api.nvim_win_get_width(0)
     end,
     provider = function (self)
-       return ""
+        return ""
     end,
     hl = function(self)
         return { fg = static.mode_cols[string.upper(self.mode:sub(1,1))],

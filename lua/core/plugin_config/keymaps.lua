@@ -2,18 +2,18 @@ local ls = require("luasnip")
 
 -- luasnip keymaps
 vim.keymap.set({ "i", "s" }, "<TAB>", function()
-  if ls.expand_or_jumpable() then
-    ls.expand_or_jump()
-  end
+    if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
+    end
 end, { silent = true })
 
 local list_snips = function()
-	local ft_list = require("luasnip").available()[vim.o.filetype]
-	local ft_snips = {}
-	for _, item in pairs(ft_list) do
-		ft_snips[item.trigger] = item.name
-	end
-	print(vim.inspect(ft_snips))
+    local ft_list = require("luasnip").available()[vim.o.filetype]
+    local ft_snips = {}
+    for _, item in pairs(ft_list) do
+        ft_snips[item.trigger] = item.name
+    end
+    print(vim.inspect(ft_snips))
 end
 
 --vim.keymap.set({"i", "s"}, "<s-RIGHT>", "<cmd>bn<cr>", {silent = true})
@@ -41,11 +41,11 @@ vim.keymap.set({"n"}, "<C-l>", "<cmd>Neorg render-latex<cr>", { silent = true })
 vim.keymap.set('x', 'g/', '<ESC>/\\%V')
 
 vim.keymap.set({"n"}, "<C-e>",
-    function()
-        local result = vim.treesitter.get_captures_at_cursor(0)
-        print(vim.inspect(result))
-    end,
-    { noremap = true, silent = false }
+function()
+    local result = vim.treesitter.get_captures_at_cursor(0)
+    print(vim.inspect(result))
+end,
+{ noremap = true, silent = false }
 )
 
 vim.keymap.set('n', '<Leader>t', function()
