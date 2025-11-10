@@ -1,0 +1,10 @@
+require("core.plugins.lazy")
+require("core.plugins.comp")
+require("core.plugins.autopairs")
+require("core.plugins.markdown")
+require("core.plugins.autocmd")
+require("core.plugins.style")
+require("core.plugins.luasnip")
+require("core.plugins.snippets.tex")
+require("core.keymaps")
+
