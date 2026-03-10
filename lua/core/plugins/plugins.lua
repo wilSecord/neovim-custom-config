@@ -6,5 +6,6 @@ require("core.plugins.autocmd")
 require("core.plugins.style")
 require("core.plugins.luasnip")
 require("core.plugins.snippets.tex")
+require("core.plugins.jupynium")
 require("core.keymaps")
 
